@@ -16,6 +16,8 @@ apiVersion: constraints.gatekeeper.sh/v1alpha1
 kind: GCPBackendServiceSecurityPolicyConstraintV1
 metadata:
   name: backend_service_security_policy_allow_list
+  annotations:
+    bundles.validator.forsetisecurity.org/scorecard-v1: operational-efficiency
 spec:
   severity: high
   parameters:

@@ -16,6 +16,8 @@ apiVersion: constraints.gatekeeper.sh/v1alpha1
 kind: GCPGLBExternalIpAccessConstraintV1
 metadata:
   name: glb_external_ip_allowlist
+  annotations:
+    bundles.validator.forsetisecurity.org/scorecard-v1: operational-efficiency
 spec:
   severity: high
   parameters:

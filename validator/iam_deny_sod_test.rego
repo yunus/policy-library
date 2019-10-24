@@ -30,9 +30,9 @@ find_violations[violation] {
 	total_issues := count(issues)
 
 	violation := issues[_]
-	trace(sprintf("violatoins %v",[issues]))
+	trace(sprintf("violatoins %v", [issues]))
 	#violation := "true"
-	
+
 }
 
 test_iam_deny_sod_violated_pairs {

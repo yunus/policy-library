@@ -32,24 +32,27 @@ deny[{
 
 	constraint := input.constraint
 	params := lib.get_constraint_params(constraint)
+
 	#trace(sprintf("parameters: %v",[params]))
 	role_pairs := params.sod_roles
 	asset := input.asset
-	
 
 	# asset := input
 	# role_pairs := ["roles/iam.serviceAccountUse,roles/iam.securityAdmin"] #params.sod_roles
 
 	asset.asset_type == asset_types[_]
+
 	#trace(sprintf("assets :%v",[asset]))
 
 	bindings := asset.iam_policy.bindings
 
-	violations := {role_pair: sod_members |
-		some i
-		role_pair := role_pairs[i]
-		sod_members := get_sod_members(role_pair, bindings)
-	}
+	# violations := {role_pair: sod_members |
+	# 	some i
+	# 	role_pair := role_pairs[i]
+	# 	sod_members := get_sod_members(role_pair, bindings)
+	# }
+  # the below function does the same as the above comprehension.
+	violations := get_violations(role_pairs, bindings)
 
 	# make sure that we have violations to return
 	count(violations) > 0
@@ -65,6 +68,11 @@ deny[{
 ###########################
 # Rule Utilities
 ###########################
+
+get_violations(role_pairs, bindings) = [{role_pair: sod_members}] {
+	role_pair := role_pairs[_]
+	sod_members := get_sod_members(role_pair, bindings)
+}
 
 get_sod_members(role_pair, bindings) = sod_members {
 	role_set := split(role_pair, ",")

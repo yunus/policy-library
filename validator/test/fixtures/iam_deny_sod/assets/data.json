@@ -1,0 +1,51 @@
+[
+  {
+    "name": "//cloudresourcemanager.googleapis.com/projects/910972096916",
+    "asset_type": "cloudresourcemanager.googleapis.com/Project",
+    "iam_policy": {
+      "etag": "BwWTOWXt9xo=",
+      "bindings": [
+        
+        {
+          "role": "roles/editor",
+          "members": [
+            "serviceAccount:910972096916-compute@developer.gserviceaccount.com",
+            "serviceAccount:910972096916@cloudservices.gserviceaccount.com",
+            "serviceAccount:service-910972096916@containerregistry.iam.gserviceaccount.com",
+            "serviceAccount:yunusd-project@appspot.gserviceaccount.com",
+            "serviceAccount:quiz-account@yunusd-project.iam.gserviceaccount.com"
+          ]
+        },
+       
+        {
+          "role": "roles/iam.securityAdmin",
+          "members": [
+            "serviceAccount:910972096916@cloudbuild.gserviceaccount.com",
+            "user:yunusd@google.com"
+          ]
+        },
+        {
+          "role": "roles/iam.serviceAccountUser",
+          "members": [
+            "serviceAccount:910972096916@cloudbuild.gserviceaccount.com",
+            "serviceAccount:init-action-k8s@yunusd-project.iam.gserviceaccount.com",
+            "user:yunusd@google.com"
+          ]
+        },
+        {
+          "role": "roles/owner",
+          "members": [
+            "serviceAccount:gce-enforcer-exemption@ce-gce-enforcer-service-acct.iam.gserviceaccount.com",
+            "serviceAccount:quiz-account@yunusd-project.iam.gserviceaccount.com",
+            "user:yunus@durmus.io",
+            "user:yunusd@google.com"
+          ]
+        }
+       
+      ]
+      
+        
+    
+    }
+  }
+]

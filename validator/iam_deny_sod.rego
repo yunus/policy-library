@@ -51,7 +51,7 @@ deny[{
 	# 	role_pair := role_pairs[i]
 	# 	sod_members := get_sod_members(role_pair, bindings)
 	# }
-  # the below function does the same as the above comprehension.
+	# the below function does the same as the above comprehension.
 	violations := get_violations(role_pairs, bindings)
 
 	# make sure that we have violations to return

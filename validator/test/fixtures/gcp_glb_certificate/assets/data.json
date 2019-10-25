@@ -1,0 +1,24 @@
+[
+  {
+    "name": "//compute.googleapis.com/projects/tf-dev-simple-gke1/global/targetHttpProxies/k8s-tp-default-basic-ingress--e079c11fa9ff3887",
+    "asset_type": "compute.googleapis.com/targetHttpsProxy",
+    "resource": {
+      "version": "v1",
+      "discovery_document_uri": "https://www.googleapis.com/discovery/v1/apis/compute/v1/rest",
+      "discovery_name": "TargetHttpsProxy",
+      "parent": "//cloudresourcemanager.googleapis.com/projects/383988537254",
+      "data": {
+        "creationTimestamp": "2019-09-12T01:07:54.866-07:00",
+        "description": "{\"kubernetes.io/ingress-name\": \"default/basic-ingress\"}",
+        "id": "8465630896271409717",
+        "name": "k8s-tp-default-basic-ingress--e079c11fa9ff3887",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/global/targetHttpProxies/k8s-tp-default-basic-ingress--e079c11fa9ff3887",
+        "urlMap": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/global/urlMaps/k8s-um-default-basic-ingress--e079c11fa9ff3887",
+        "sslCertificates" : [
+          "certificate1",
+          "certificate2"
+        ]
+      }
+    }
+  }
+]

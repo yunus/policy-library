@@ -104,14 +104,11 @@ spec:
             # Rule Utilities
             ###########################
             
-<<<<<<< HEAD
             get_violations(role_pairs, bindings) = [{role_pair: sod_members}] {
             	role_pair := role_pairs[_]
             	sod_members := get_sod_members(role_pair, bindings)
             }
             
-=======
->>>>>>> 2d72d9cd6655f64bf80cbb26990ac93faf40936e
             get_sod_members(role_pair, bindings) = sod_members {
             	role_set := split(role_pair, ",")
             	some i, j

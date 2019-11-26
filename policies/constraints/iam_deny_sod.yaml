@@ -27,3 +27,19 @@ spec:
     sod_roles:
       - "roles/compute.networkAdmin,roles/compute.securityAdmin"
       - "roles/owner,roles/editor"
+---
+apiVersion: constraints.gatekeeper.sh/v1alpha1
+kind: GCPIAMDenySodConstraintV1
+metadata:
+  name: iam_deny_sod
+  annotations:
+    description: Given rule pairs should not be assigned to the same identity
+spec:
+  severity: high
+  match:
+    target: ["organization/*"]
+    exclude: [] # optional, default is no exclusions
+  parameters:
+    sod_roles:
+      - "roles/compute.networkAdmin,roles/compute.securityAdmin"
+      - "roles/owner,roles/editor"

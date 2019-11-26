@@ -1,0 +1,12 @@
+apiVersion: constraints.gatekeeper.sh/v1alpha1
+kind: GCPIAMAuditLogConstraintV1
+metadata:
+  name: audit_log_data_read_write
+spec:
+  # match:
+  #   target: ["projects/754957183425"]
+
+  parameters:
+    services: [storage.googleapis.com]
+    log_types: [DATA_READ, ADMIN_READ]
+    allowed_exemptions: ['user:yunusd@google.com']

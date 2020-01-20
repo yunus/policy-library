@@ -1,0 +1,10 @@
+apiVersion: constraints.gatekeeper.sh/v1alpha1
+kind: GCPBackendServiceSecurityPolicyConstraintV1
+metadata:
+  name: backend_service_security_policy_allow_list
+spec:
+  severity: high
+  parameters:
+    mode: "allowlist"
+    backend_services:
+      - "//compute.googleapis.com/projects/tf-dev-simple-gke1/global/backendServices/without_security_policy"

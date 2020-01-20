@@ -1,0 +1,157 @@
+[
+  {
+    "name": "//compute.googleapis.com/projects/tf-dev-simple-gke1/global/backendServices/with_security_policy",
+    "asset_type": "compute.googleapis.com/BackendService",
+    "resource": {
+      "version": "v1",
+      "discovery_document_uri": "https://www.googleapis.com/discovery/v1/apis/compute/v1/rest",
+      "discovery_name": "BackendService",
+      "parent": "//cloudresourcemanager.googleapis.com/projects/383988537254",
+      "data": {
+        "affinityCookieTtlSec": 0,
+        "backend": [
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "maxRatePerInstance": 1,
+            "resourceGroup": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-a/instanceGroups/k8s-ig--e079c11fa9ff3887"
+          },
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "maxRatePerInstance": 1,
+            "resourceGroup": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-b/instanceGroups/k8s-ig--e079c11fa9ff3887"
+          },
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "maxRatePerInstance": 1,
+            "resourceGroup": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-c/instanceGroups/k8s-ig--e079c11fa9ff3887"
+          }
+        ],
+        "backends": [
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "group": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-a/instanceGroups/k8s-ig--e079c11fa9ff3887",
+            "maxRatePerInstance": 1
+          },
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "group": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-b/instanceGroups/k8s-ig--e079c11fa9ff3887",
+            "maxRatePerInstance": 1
+          },
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "group": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-c/instanceGroups/k8s-ig--e079c11fa9ff3887",
+            "maxRatePerInstance": 1
+          }
+        ],
+        "connectionDraining": {
+          "drainingTimeoutSec": 0
+        },
+        "creationTimestamp": "2019-09-12T01:07:41.925-07:00",
+        "description": "{\"kubernetes.io/service-name\":\"default/web\",\"kubernetes.io/service-port\":\"8080\"}",
+        "enableCDN": false,
+        "enableCdn": false,
+        "fingerprint": "ylM2wcRi6mU=",
+        "healthCheck": [
+          "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/global/healthChecks/k8s-be-30125--e079c11fa9ff3887"
+        ],
+        "healthChecks": [
+          "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/global/healthChecks/k8s-be-30125--e079c11fa9ff3887"
+        ],
+        "id": "8249112639873237538",
+        "loadBalancingScheme": "EXTERNAL",
+        "name": "k8s-be-30125--e079c11fa9ff3887",
+        "port": 30125,
+        "portName": "port30125",
+        "protocol": "HTTP",
+        "securityPolicy": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/global/securityPolicies/ca-how-to-security-policy",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/global/backendServices/k8s-be-30125--e079c11fa9ff3887",
+        "serviceProtocol": "HTTP",
+        "sessionAffinity": "NONE",
+        "timeoutSec": 30
+      }
+    }
+  },
+  {
+    "name": "//compute.googleapis.com/projects/tf-dev-simple-gke1/global/backendServices/without_security_policy_and_exception",
+    "asset_type": "compute.googleapis.com/BackendService",
+    "resource": {
+      "version": "v1",
+      "discovery_document_uri": "https://www.googleapis.com/discovery/v1/apis/compute/v1/rest",
+      "discovery_name": "BackendService",
+      "parent": "//cloudresourcemanager.googleapis.com/projects/383988537254",
+      "data": {
+        "affinityCookieTtlSec": 0,
+        "backend": [
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "maxRatePerInstance": 1,
+            "resourceGroup": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-a/instanceGroups/k8s-ig--e079c11fa9ff3887"
+          },
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "maxRatePerInstance": 1,
+            "resourceGroup": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-b/instanceGroups/k8s-ig--e079c11fa9ff3887"
+          },
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "maxRatePerInstance": 1,
+            "resourceGroup": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-c/instanceGroups/k8s-ig--e079c11fa9ff3887"
+          }
+        ],
+        "backends": [
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "group": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-a/instanceGroups/k8s-ig--e079c11fa9ff3887",
+            "maxRatePerInstance": 1
+          },
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "group": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-b/instanceGroups/k8s-ig--e079c11fa9ff3887",
+            "maxRatePerInstance": 1
+          },
+          {
+            "balancingMode": "RATE",
+            "capacityScaler": 1,
+            "group": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/zones/europe-west4-c/instanceGroups/k8s-ig--e079c11fa9ff3887",
+            "maxRatePerInstance": 1
+          }
+        ],
+        "connectionDraining": {
+          "drainingTimeoutSec": 0
+        },
+        "creationTimestamp": "2019-09-12T01:07:41.925-07:00",
+        "description": "{\"kubernetes.io/service-name\":\"default/web\",\"kubernetes.io/service-port\":\"8080\"}",
+        "enableCDN": false,
+        "enableCdn": false,
+        "fingerprint": "ylM2wcRi6mU=",
+        "healthCheck": [
+          "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/global/healthChecks/k8s-be-30125--e079c11fa9ff3887"
+        ],
+        "healthChecks": [
+          "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/global/healthChecks/k8s-be-30125--e079c11fa9ff3887"
+        ],
+        "id": "8249112639873237538",
+        "loadBalancingScheme": "EXTERNAL",
+        "name": "k8s-be-30125--e079c11fa9ff3887",
+        "port": 30125,
+        "portName": "port30125",
+        "protocol": "HTTP",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/tf-dev-simple-gke1/global/backendServices/k8s-be-30125--e079c11fa9ff3887",
+        "serviceProtocol": "HTTP",
+        "sessionAffinity": "NONE",
+        "timeoutSec": 30
+      }
+    }
+  }
+]
